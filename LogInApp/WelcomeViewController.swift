@@ -27,7 +27,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        greetingLabel.text = ("hello, your login is - \(greeting ?? "Please register")")
+        greetingLabel.text = ("hello, 👋🏽\(greeting ?? "Please register")")
     }
     
     override func viewWillAppear(_ animated: Bool) {

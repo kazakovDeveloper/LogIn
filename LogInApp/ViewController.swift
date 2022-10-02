@@ -15,23 +15,6 @@ class ViewController: UIViewController {
     var login = "Max"
     var password = "123"
     
-    enum authStatus: String  {
-        case open
-        case closed
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let view = UIView(frame: CGRect(x: 200, y: 100, width: 320, height: 50))
-        let gradient = CAGradientLayer()
-
-        gradient.frame = view.bounds
-        gradient.colors = [UIColor.white.cgColor, UIColor.black.cgColor]
-
-        view.layer.insertSublayer(gradient, at: 0)
-    }
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeView = segue.destination as? WelcomeViewController else { return }
         welcomeView.greeting = loginOutlet.text
@@ -50,7 +33,6 @@ class ViewController: UIViewController {
     @IBAction func cancelButtonDidTapped() {
         dismiss(animated: true)
     }
-    
     
     @IBAction func LogInActionButton() {
         if loginOutlet.text == login && passwordOutlet.text == password {

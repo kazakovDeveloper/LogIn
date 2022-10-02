@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -14,14 +13,14 @@
             <objects>
                 <viewController definesPresentationContext="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="LogInApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ASz-DC-HeJ">
-                                <rect key="frame" x="50" y="226" width="290" height="88"/>
+                                <rect key="frame" x="50" y="179" width="220" height="88"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2sA-BH-Rje">
-                                        <rect key="frame" x="0.0" y="0.0" width="290" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="zWz-EB-Wud"/>
                                         </constraints>
@@ -29,7 +28,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IP5-jm-4zI">
-                                        <rect key="frame" x="0.0" y="54" width="290" height="34"/>
+                                        <rect key="frame" x="0.0" y="54" width="220" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="h3a-Rl-1c7"/>
                                         </constraints>
@@ -39,26 +38,40 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTH-On-kYZ">
-                                <rect key="frame" x="115" y="390" width="160" height="48"/>
+                                <rect key="frame" x="115" y="343" width="90" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RTH-On-kYZ" secondAttribute="height" multiplier="10:3" id="hhY-MN-QOR"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log In"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Log In" cornerStyle="medium">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="LogInActionButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jhi-yW-Hkh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0W-Te-E4t">
-                                <rect key="frame" x="217" y="492" width="123" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0W-Te-E4t">
+                                <rect key="frame" x="217" y="483" width="123" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Forgot password?"/>
+                                <state key="normal" title="Forgot password?">
+                                    <color key="titleColor" systemColor="tintColor"/>
+                                </state>
                                 <connections>
                                     <action selector="forgotPasswordAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zZ4-LC-VdB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWu-CT-LOS">
-                                <rect key="frame" x="50" y="492" width="95" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWu-CT-LOS">
+                                <rect key="frame" x="50" y="483" width="95" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="forgot loggin?"/>
+                                <state key="normal" title="forgot loggin?">
+                                    <color key="titleColor" systemColor="tintColor"/>
+                                </state>
                                 <connections>
                                     <action selector="forgotLoginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SLS-QB-1Cx"/>
                                 </connections>
@@ -75,6 +88,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KWu-CT-LOS" secondAttribute="bottom" constant="288" id="UZz-fZ-kdt"/>
                             <constraint firstItem="ASz-DC-HeJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Uf4-VI-YaR"/>
                             <constraint firstItem="e0W-Te-E4t" firstAttribute="leading" secondItem="KWu-CT-LOS" secondAttribute="trailing" constant="72" id="bTW-as-znP"/>
+                            <constraint firstItem="ASz-DC-HeJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bc9-OZ-Jdy"/>
                             <constraint firstItem="RTH-On-kYZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="115" id="ctg-uh-eUY"/>
                             <constraint firstItem="ASz-DC-HeJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="179" id="hwa-Od-4Kk"/>
                             <constraint firstItem="KWu-CT-LOS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="j2i-Aq-eVo"/>
@@ -98,19 +112,17 @@
             <objects>
                 <viewController storyboardIdentifier="PerformSegue" modalPresentationStyle="fullScreen" id="YJe-Tm-TsZ" customClass="WelcomeViewController" customModule="LogInApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eYn-Cp-hvJ">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laz-nw-NHp">
-                                <rect key="frame" x="79" y="118" width="218" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laz-nw-NHp">
+                                <rect key="frame" x="75" y="70" width="170" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQ8-bt-951">
-                                <rect key="frame" x="131" y="472" width="129" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQ8-bt-951">
+                                <rect key="frame" x="130" y="230" width="60" height="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log out"/>
                                 <connections>
@@ -120,6 +132,14 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aDd-KI-1LD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aDd-KI-1LD" firstAttribute="trailing" secondItem="dQ8-bt-951" secondAttribute="trailing" constant="130" id="2B1-05-VKT"/>
+                            <constraint firstItem="laz-nw-NHp" firstAttribute="leading" secondItem="aDd-KI-1LD" secondAttribute="leading" constant="75" id="9Lh-wG-ezN"/>
+                            <constraint firstItem="dQ8-bt-951" firstAttribute="top" secondItem="laz-nw-NHp" secondAttribute="bottom" constant="139.5" id="BvZ-d9-djz"/>
+                            <constraint firstItem="aDd-KI-1LD" firstAttribute="bottom" secondItem="dQ8-bt-951" secondAttribute="bottom" constant="308" id="X5Y-gn-v9r"/>
+                            <constraint firstItem="dQ8-bt-951" firstAttribute="leading" secondItem="aDd-KI-1LD" secondAttribute="leading" constant="130" id="fOt-SF-lkV"/>
+                            <constraint firstItem="aDd-KI-1LD" firstAttribute="trailing" secondItem="laz-nw-NHp" secondAttribute="trailing" constant="75" id="oJi-Z8-gzF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gqk-dQ-78r"/>
                     <connections>
@@ -138,6 +158,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
